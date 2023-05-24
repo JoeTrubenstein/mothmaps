@@ -12,6 +12,7 @@ import {
 import * as Realm from "realm-web";
 // Check out app.js for examples of how to run GraphQL operations
 import App from "./App";
+import "./assets/tailwind.css"
 
 // To set up your app:
 //

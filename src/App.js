@@ -1,9 +1,10 @@
-import "./index.css";
 import * as React from "react";
 import { useQuery } from "@apollo/client";
 import { FIND_SIGHTINGS } from "./graphql-operations";
-
 import AnchorLink from "react-anchor-link-smooth-scroll";
+
+import Burger from "./components/burger";
+import MapSection from "./components/mapSection";
 
 export default function App(props) {
 
@@ -14,6 +15,60 @@ export default function App(props) {
 
   return (
     <div className="App">
+
+
+
+
+{/* NavBar Area */}
+<div className="bg-gray-900">
+      <div className="mr-2 flex md:hidden w-screen items-right content-center">
+        {/* Mobile menu button */}
+        <Burger />
+      </div>
+      <nav className=" bg-gray-900">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="flex-shrink-0"></div>
+              <div className="hidden md:block">
+                <div className="font-display ml-10 flex items-baseline pt-12">
+                  <span className="ml-4 px-3 py-2 rounded-md text-md font-medium text-white focus:outline-none focus:text-white focus:bg-gray-700">
+                    MothMaps
+                  </span>
+                  <AnchorLink
+                    href="#sights"
+                    className="ml-4 px-3 py-2 rounded-md text-md font-medium text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+                  >
+                    Sightings
+                  </AnchorLink>
+                  <AnchorLink
+                    href="#map"
+                    className="ml-4 px-3 py-2 rounded-md text-md font-medium text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+                  >
+                    Map
+                  </AnchorLink>
+                  <AnchorLink
+                    href="#contact"
+                    className="ml-4 px-3 py-2 rounded-md text-md font-medium text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+                  >
+                    Contact
+                  </AnchorLink>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+{/* NavBar Area */}
+
+
+
+
+
+
+
+
 
  {/* Hero Area */}
 <section className="text-gray-500 bg-gray-900 body-font">
@@ -193,8 +248,8 @@ export default function App(props) {
 
 
 
-
-
+{/* Map Area */}
+<MapSection />
 
 
 
