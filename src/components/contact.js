@@ -62,7 +62,6 @@ function Contact() {
     });
   }
   function collectEmail(event) {
-    console.log(sightingObject)
     setSightingObject({
       ...sightingObject,
       email: event.target.value,
