@@ -13,7 +13,7 @@ import lampBro from "./images/moth.webp"
 export default function App(props) {
 
   const { loading, error, data } = useQuery(FIND_SIGHTINGS);
-  if (loading) console.log("fetching gql data yo");
+  if (loading) console.log("fetching gql data");
   if (error) console.log(error);
 
 
