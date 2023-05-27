@@ -29,13 +29,10 @@ const center = {
     lat: 41.0082, lng: 28.9784
 };
 
-
-
-
 function CustomMap(props) {
 
     const { loading, error, data } = useQuery(THE_SIGHTINGS);
-    if (loading) console.log("fetching gql data");
+    if (loading) console.log("fetching gql data yo");
     if (error) console.log(error);
 
     const [showModal, setShowModal] = useState(false);
@@ -47,7 +44,7 @@ function CustomMap(props) {
     }
 
     const onLoad = marker => {
-        console.log('marker: ', marker)
+        console.log("Markers Loaded")
     }
 
     return (

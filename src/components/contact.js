@@ -136,7 +136,12 @@ function Contact() {
                 />
               </div>
               <div className="p-2 mb-8 w-full flex items-center justify-center">
-                <Suggest collectLocation={collectLocation} />
+
+                {/* GeoSuggest Area */}
+                <Suggest className="w-full" collectLocation={collectLocation} />
+
+
+
               </div>
               <div
                 data-netlify-recaptcha="true"

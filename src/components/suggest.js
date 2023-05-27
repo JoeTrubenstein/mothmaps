@@ -12,8 +12,8 @@ function Suggest(props) {
     };
   
     return (
+      <div  style={{width: `100%`}}>
           <StandaloneSearchBox
-            style={{width: `100%`}}
             onLoad={onLoad}
             onPlacesChanged={onPlacesChanged}
           >
@@ -23,6 +23,7 @@ function Suggest(props) {
               placeholder="Location"
             />
           </StandaloneSearchBox>
+          </div>
     );
   }
 export default Suggest;
