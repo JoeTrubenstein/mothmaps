@@ -1,0 +1,16 @@
+  .autocomplete {
+    width: 240px;
+    height: 32px;
+    padding: 0 12px;
+    font-size: 14px;
+    border-radius: 3px;
+    border:1px solid #374251 ;
+    background-color: #1F2A37;
+    margin: 0 auto;
+    text-align: left;
+
+  }
+
+  .autocomplete :focus {
+    border: 1px solid #15B7A6 !important,
+  }

@@ -12,7 +12,9 @@ import {
 import * as Realm from "realm-web";
 // Check out app.js for examples of how to run GraphQL operations
 import App from "./App";
+import { LoadScript } from "@react-google-maps/api";
 import "./assets/tailwind.css"
+
 
 // To set up your app:
 //
@@ -61,9 +63,15 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
 // Wrap your app with an ApolloProvider that provides the client
 createRoot(document.getElementById("root")).render(
   <ApolloProvider client={client}>
+            <LoadScript
+            googleMapsApiKey={process.env.REACT_APP_MAP_KEY}
+            libraries={["places"]}
+        >
     <App />
+    </LoadScript>
   </ApolloProvider>,
 );

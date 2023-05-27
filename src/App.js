@@ -5,6 +5,10 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import Burger from "./components/burger";
 import MapSection from "./components/mapSection";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
+
+import lampBro from "./images/moth.webp"
 
 export default function App(props) {
 
@@ -15,9 +19,6 @@ export default function App(props) {
 
   return (
     <div className="App">
-
-
-
 
 {/* NavBar Area */}
 <div className="bg-gray-900">
@@ -32,8 +33,8 @@ export default function App(props) {
               <div className="flex-shrink-0"></div>
               <div className="hidden md:block">
                 <div className="font-display ml-10 flex items-baseline pt-12">
-                  <span className="ml-4 px-3 py-2 rounded-md text-md font-medium text-white focus:outline-none focus:text-white focus:bg-gray-700">
-                    MothMaps
+                  <span className="ml-4 px-3 py-2 rounded-md text-xl font-medium text-teal-500 focus:outline-none">
+                    mothMaps
                   </span>
                   <AnchorLink
                     href="#sights"
@@ -62,16 +63,8 @@ export default function App(props) {
     </div>
 {/* NavBar Area */}
 
-
-
-
-
-
-
-
-
  {/* Hero Area */}
-<section className="text-gray-500 bg-gray-900 body-font">
+<section className="text-gray-200 bg-gray-900 body-font">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
@@ -98,7 +91,7 @@ export default function App(props) {
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="https://source.unsplash.com/random/?Cryptocurrency/"
+            src={lampBro}
           />
         </div>
       </div>
@@ -108,7 +101,7 @@ export default function App(props) {
 
 
  {/* Sighting Area */}
-      <section id="sights" className="text-gray-500 bg-gray-900 body-font">
+      <section id="sights" className="text-gray-200 bg-gray-900 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -mx-4 -my-8">
             {data ? (
@@ -252,6 +245,13 @@ export default function App(props) {
 <MapSection />
 
 
+{/* Contact Form Area */}
+<Contact />
+
+
+{/* Footer Area */}
+
+<Footer />
 
     </div>
   );
